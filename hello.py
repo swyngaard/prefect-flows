@@ -11,7 +11,8 @@ def say_hello():
 with Flow("hello-flow") as flow:
     say_hello()
 
-flow.run_config = KubernetesRun(image="prefecthq/prefect:0.14.15")
+#flow.run_config = KubernetesRun(image="prefecthq/prefect:0.14.15")
+flow.run_config = KubernetesRun()
 
 flow.storage = GitHub(
     repo="swyngaard/prefect-flows",              # name of repo
