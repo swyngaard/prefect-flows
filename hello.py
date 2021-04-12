@@ -2,6 +2,7 @@ import prefect
 from prefect import task, Flow
 from prefect.run_configs import KubernetesRun
 from prefect.storage import GitHub
+from prefect.executors import DaskExecutor
 
 @task
 def say_hello():
